@@ -1,7 +1,7 @@
 katz_deli = []
 
 def line(katz_deli)
-  if katz_deli.length == 0
+  if katz_deli.length == 0 
     puts "The line is currently empty."
   else
     message = "The line is currently:"
@@ -13,15 +13,16 @@ def line(katz_deli)
 end
 
 def take_a_number(katz_deli, name)
-  katz_deli << name 
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+  katz_deli << name
+    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
 end
 
-def now_serving(line)
-  if line.length == 0
+def now_serving(queue)
+  if queue.length == 0 
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{line.first}."
+    puts "Currently serving #{queue.first}."
   end
-  line = line.shift
+  queue = queue.shift
 end
+
